@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TimeTable.PttC">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" HBox.hgrow="ALWAYS">
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="pttTable" layoutX="436.0" layoutY="35.0" prefHeight="364.0" prefWidth="150.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="436.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="35.0">
+                     <columns>
+                        <TableColumn fx:id="ColumnID" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="ColumnDay" minWidth="0.0" prefWidth="100.0" text="Day" />
+                        <TableColumn fx:id="ColumnPeriod" prefWidth="100.0" text="Period" />
+                        <TableColumn fx:id="ColumnRoom" prefWidth="150.0" text="Room" />
+                        <TableColumn fx:id="ColumnSection" prefWidth="100.0" text="Section" />
+                        <TableColumn fx:id="ColumnFaculty" prefWidth="150.0" text="Faculty" />
+                        <TableColumn fx:id="ColumnSubject" prefWidth="150.0" text="Subject" />
+                     </columns>
+                  </TableView>
+                  <GridPane layoutX="43.0" layoutY="158.0" prefHeight="160.0" prefWidth="300.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Section" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Day">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Period" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Room" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textDay" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+                        <Text fx:id="textPeriod" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="textRoom" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="choiceSection" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ChoiceBox fx:id="choiceFaculty" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="choiceSubject" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <Text fill="#0091ea" layoutX="30.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TimeTable Information: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="pttEdit" layoutX="191.0" layoutY="354.0" mnemonicParsing="false" onAction="#pttEditClick" style="-fx-background-color: #00897b;" text="Edit" textFill="WHITE" />
+                  <Text fill="#0091ea" layoutX="411.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result History :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="pttSave" layoutX="320.0" layoutY="354.0" mnemonicParsing="false" onAction="#pttSaveClick" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2196F3;" text="Save" textFill="WHITE" />
+                  <Button fx:id="pttCancel" layoutX="246.0" layoutY="354.0" mnemonicParsing="false" onAction="#pttCancelClick" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #00897b;" text="Cancel" textFill="WHITE" />
+                  <Button fx:id="pttRefresh" layoutX="93.0" layoutY="354.0" mnemonicParsing="false" onAction="#pttRefreshClick" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2196F3;" text="Refresh" textFill="WHITE" />
+                  <Button fx:id="pttBack" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#pttBackClick" style="-fx-background-color: #00897b;" text="Back" textFill="#fcfafa" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</HBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ScheduleMem.RescheduleC">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" HBox.hgrow="ALWAYS">
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="Table" layoutX="253.0" layoutY="35.0" prefHeight="364.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="35.0">
+                     <columns>
+                        <TableColumn fx:id="ColumnDay" prefWidth="100.0" text="Day" />
+                        <TableColumn fx:id="ColumnPeriod" minWidth="0.0" prefWidth="100.0" text="Period" />
+                     </columns>
+                  </TableView>
+                  <Text fill="#0091ea" layoutX="19.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#0091ea" layoutX="253.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reschedule">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="back" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#backClick" style="-fx-background-color: #00897b;" text="Back" textFill="#fcfafa" />
+                  <ChoiceBox fx:id="choiceFaculty" layoutX="81.0" layoutY="119.0" prefWidth="150.0" />
+                  <Text fill="#0091ea" layoutX="18.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Section">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="choiceSection" layoutX="81.0" layoutY="205.0" prefWidth="150.0" />
+                  <TableView fx:id="Table1" layoutX="485.0" layoutY="36.0" prefHeight="364.0" prefWidth="101.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="35.0">
+                     <columns>
+                        <TableColumn fx:id="ColumnRoom" prefWidth="100.0" text="Room" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="room" layoutX="119.0" layoutY="282.0" mnemonicParsing="false" onAction="#roomClick" style="-fx-background-color: #00897b;" text="Get Rooms" textFill="#fcfafa" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</HBox>
