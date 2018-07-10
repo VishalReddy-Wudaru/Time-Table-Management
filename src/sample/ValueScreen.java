@@ -6,7 +6,7 @@ package sample;
 public class ValueScreen {
     public int width=1350,height=700;
     public boolean full=false;
-    public String user="root";
-    public String pass="vishal";
+    public String user="";#Enter Username of MYSQL
+    public String pass="";#Enter Password of MYSQL
 
 }
